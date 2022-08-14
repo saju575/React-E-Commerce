@@ -21,19 +21,39 @@ const Info = styled.div`
 	transition: all 0.8s ease;
 	coursor: pointer;
 `;
-const Container = styled.div`
+const MainContainer = styled.div`
 	flex: 1;
+	min-width: 286px;
+	height: 405px;
+	display: flex;
+	flex-direction: column;
+
+	// align-items: center;
+	justify-content: center;
 	margin: 5px;
-	min-width: 280px;
+`;
+const Image = styled.img`
+	height: 75%;
+	z-index: 2;
+	transition: all 0.5s ease;
+`;
+const Container = styled.div`
+	background-color: #f5fbfd;
+	// margin: 5px;
+	// min-width: 280px;
+	width: 100%;
 	height: 350px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #f5fbfd;
+
 	position: relative;
 
 	&:hover ${Info} {
 		opacity: 1;
+	}
+	&: hover ${Image} {
+		transform: scale(1.2);
 	}
 `;
 const Circle = styled.div`
@@ -42,10 +62,6 @@ const Circle = styled.div`
 	border-radius: 50%;
 	background: white;
 	position: absolute;
-`;
-const Image = styled.img`
-	height: 75%;
-	z-index: 2;
 `;
 
 const Icon = styled.div`
@@ -64,23 +80,33 @@ const Icon = styled.div`
 		transform: scale(1.1);
 	}
 `;
+const Title = styled.h4`
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	margin-top: 3px;
+`;
+const Price = styled.span``;
 const Product = ({ item }) => {
 	return (
-		<Container>
-			<Circle />
-			<Image src={item.img} />
-			<Info>
-				<Icon>
-					<ShoppingCartOutlined />
-				</Icon>
-				<Icon>
-					<SearchOutlined />
-				</Icon>
-				<Icon>
-					<FavoriteBorderOutlined />
-				</Icon>
-			</Info>
-		</Container>
+		<MainContainer>
+			<Container>
+				<Circle />
+				<Image src={item.img} />
+				<Info>
+					<Icon>
+						<ShoppingCartOutlined />
+					</Icon>
+					<Icon>
+						<SearchOutlined />
+					</Icon>
+					<Icon>
+						<FavoriteBorderOutlined />
+					</Icon>
+				</Info>
+			</Container>
+			<Title>t-shirt</Title>
+			<Price>$15.0</Price>
+		</MainContainer>
 	);
 };
 
