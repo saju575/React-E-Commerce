@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 	flex: 1;
@@ -10,6 +11,7 @@ const Image = styled.img`
 	width: 100%;
 	height: 70%;
 	object-fit: cover;
+	${mobile({ height: "30vh" })}
 `;
 const Info = styled.div`
 	position: absolute;
@@ -26,6 +28,7 @@ const Title = styled.h1`
 	text-transform: uppercase;
 	color: white;
 	margin-bottom: 20px;
+	${mobile({ fontSize: "24px" })}
 `;
 const Button = styled.button`
 	border: none;
@@ -34,6 +37,7 @@ const Button = styled.button`
 	font-weight: 600;
 	color: gray;
 	cursor: pointer;
+	${mobile({ fontSize: "11px", padding: "7px" })}
 `;
 
 const CategoryItem = ({ item }) => {

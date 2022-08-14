@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 	height: 30px;
@@ -10,6 +11,7 @@ const Container = styled.div`
 	justify-content: center;
 	font-size: 14px;
 	font-weight: 500;
+	${mobile({ height: "25px", fontSize: "13px" })}
 `;
 const Announcement = () => {
 	return <Container>Super Deal! Free Shipping on Orders Over $50</Container>;
