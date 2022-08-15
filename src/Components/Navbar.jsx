@@ -2,7 +2,7 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, tablet, tabletC } from "../responsive";
 
 const Container = styled.div`
 	height: 60px;
@@ -34,6 +34,7 @@ const SearchContainer = styled.div`
 `;
 const Input = styled.input`
 	border: none;
+	${tablet({ width: "63px" })}
 	${mobile({ width: "50px" })}
 `;
 const Center = styled.div`
@@ -42,6 +43,7 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
 	font-weight: bold;
+	${tablet({ fontSize: "24px" })}
 	${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -49,6 +51,9 @@ const Right = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	${tablet({ flex: 2, justifyContent: "center" })}
+	${tabletC({ justifyContent: "flex-end" })}
 	${mobile({ flex: 2, justifyContent: "center" })}
 `;
 const MenuItem = styled.div`

@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Announcement from "../Components/Announcement";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
 	/* ${mobile({ overflowX: "hidden" })} */
+	${tablet({ zoom: "95%" })}
 `;
 
 const Wrapper = styled.div`
@@ -24,6 +25,7 @@ const Top = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
+	${tablet({ padding: 0 })}
 	${mobile({ padding: "5px" })}
 `;
 
@@ -39,6 +41,7 @@ const TopButton = styled.button`
 `;
 
 const TopTexts = styled.div`
+	${tablet({ display: "none" })}
 	${mobile({ display: "none" })}
 `;
 const TopText = styled.span`
@@ -50,6 +53,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
 	display: flex;
 	justify-content: space-between;
+	${tablet({ flexDirection: "column" })}
 	${mobile({ flexDirection: "column" })}
 `;
 
@@ -132,6 +136,7 @@ const Summary = styled.div`
 	border-radius: 10px;
 	padding: 20px;
 	height: 50vh;
+	${tablet({ marginTop: "20px" })}
 `;
 
 const SummaryTitle = styled.h1`

@@ -1,9 +1,8 @@
-// import Home from "./Pages/Home";
-
 import styled from "styled-components";
+// import Home from "./Pages/Home";
 import Cart from "./Pages/Cart";
-import { mobileXS } from "./responsive";
 // import Login from "./Pages/Login";
+import { mobileXS } from "./responsive";
 // import Register from "./Pages/Register";
 
 // import Product from "./Pages/Product";
@@ -14,13 +13,13 @@ const Container = styled.div`
 `;
 
 const App = () => {
-	// return <Home />;
-	// return <ProductList />;
-	// return <Product />;
-	// return <Register />;
-	// return <Login />;
 	return (
 		<Container>
+			{/* <Home /> */}
+			{/* <ProductList /> */}
+			{/* <Product /> */}
+			{/* <Register /> */}
+			{/* <Login /> */}
 			<Cart />
 		</Container>
 	);

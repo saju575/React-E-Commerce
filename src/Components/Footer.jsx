@@ -8,10 +8,11 @@ import {
 	Twitter,
 } from "@material-ui/icons";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
 	display: flex;
+	${tablet({ zoom: "95%" })}
 	${mobile({ flexDirection: "column" })}
 `;
 const Left = styled.div`
@@ -41,6 +42,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
 	flex: 1;
 	padding: 20px;
+	${tablet({ display: "none" })}
 	${mobile({ display: "none" })}
 `;
 const Title = styled.h3`
