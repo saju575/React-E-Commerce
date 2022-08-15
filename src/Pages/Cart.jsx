@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Announcement from "../Components/Announcement";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
-import { mobile, tablet } from "../responsive";
+import { mobile, tablet, tabletXX } from "../responsive";
 
 const Container = styled.div`
 	/* ${mobile({ overflowX: "hidden" })} */
@@ -136,12 +136,14 @@ const Summary = styled.div`
 	border-radius: 10px;
 	padding: 20px;
 	height: 50vh;
+	${tabletXX({ height: "410px" })}
 	${tablet({ marginTop: "20px" })}
 `;
 
 const SummaryTitle = styled.h1`
 	font-weight: 200;
 	text-transform: uppercase;
+	${tabletXX({ fontSize: "25px" })}
 `;
 
 const SummaryItem = styled.div`

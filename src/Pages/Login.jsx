@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-	width: 25%;
+	width: 30%;
 	padding: 20px;
 	background-color: white;
 	${tablet({ width: "60%" })}

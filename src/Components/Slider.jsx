@@ -3,17 +3,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { sliderItems } from "../data";
-import { mobile, tablet } from "../responsive";
+import { mobile, tablet, tabletXX } from "../responsive";
 
 const Container = styled.div`
 	width: 100%;
 	height: calc(100vh - 90px);
 	display: flex;
-	// background-color: coral;
+
 	position: relative;
 	overflow: hidden;
 
-	/* ${tablet({ zoom: "90%" })} */
 	${tablet({ height: "60vh", marginBottom: "10px" })}
 	${mobile({ display: "none" })}
 `;
@@ -49,7 +48,6 @@ const Slide = styled.div`
 	width: 100vw;
 	height: 100vh;
 	background-color: #${(props) => props.bg};
-	/* ${tablet({ alignItems: "top" })} */
 `;
 const ImgContainer = styled.div`
 	flex: 1;
@@ -60,7 +58,7 @@ const ImgContainer = styled.div`
 `;
 const Image = styled.img`
 	height: 80%;
-	/* width: 50%; */
+
 	object-fit: cover;
 	${tablet({ width: "100%" })}
 `;
@@ -72,6 +70,7 @@ const InfoContainer = styled.div`
 const Title = styled.h1`
 	text-transform: uppercase;
 	font-size: 70px;
+	${tabletXX({ fontSize: "50px" })}
 	${tablet({ fontSize: "26px" })}
 `;
 const Desc = styled.p`
@@ -80,6 +79,7 @@ const Desc = styled.p`
 	font-size: 20px;
 	font-weight: 500;
 	letter-spacing: 2px;
+	${tabletXX({ fontSize: "15px", margin: "40px 0" })}
 	${tablet({ fontSize: "13px", margin: "20px 0" })}
 `;
 const Button = styled.button`
